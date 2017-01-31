@@ -1,0 +1,12 @@
+<h1> Contact </h1>
+<h2> First Name: <%= @contact.first_name %></h2>
+<h2> Last Name: <%= @contact.last_name %></h2>
+<h2>Email: <%= @contact.email %></h2>
+<h2> Phone Number: <%= @contact.phone_number %></h2>
+
+<%= form_tag "/contacts/#{@contact.id}", method: :delete do %>
+  <input type="submit" value="Delete">
+<% end %> 
+
+
+<%= button_to "Edit", "/contacts/#{@contact.id}/edit", method: :get %>
